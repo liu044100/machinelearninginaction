@@ -67,7 +67,11 @@ def main():
     
     fig = plt.figure()
     ax = fig.add_subplot(111)
-    ax.scatter(datingDataMat[:,0], datingDataMat[:,1],15.0*array(datingLabels), 15.0*array(datingLabels), 15.0*array(datingLabels))
+    # the first 15.0 *array is color, second one is scale
+    ax.scatter(datingDataMat[:,0], datingDataMat[:,1],15.0*array(datingLabels), 15.0*array(datingLabels))
+    ax.set_title('KNN')
+    ax.set_xlabel('Flying time')
+    ax.set_ylabel('Game time')
     plt.show()
 
 if __name__ == "__main__":
